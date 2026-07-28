@@ -1,0 +1,133 @@
+:root {
+  --ink: #f0d9a8;
+  --shadow: rgba(12, 8, 4, 0.62);
+  --font: "Cormorant Garamond", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0806;
+  font-family: var(--font);
+  color: var(--ink);
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.screen__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.screen__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(18, 10, 6, 0.78) 0%, rgba(18, 10, 6, 0.22) 40%, rgba(18, 10, 6, 0.22) 60%, rgba(18, 10, 6, 0.78) 100%),
+    radial-gradient(circle at center, rgba(240, 217, 168, 0.06) 0%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+.screen__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding:
+    max(28px, env(safe-area-inset-top))
+    24px
+    max(28px, env(safe-area-inset-bottom));
+  text-align: center;
+}
+
+.screen__name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: var(--font);
+  font-size: clamp(2.4rem, 8vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-transform: uppercase;
+  text-shadow: 0 4px 32px var(--shadow);
+  text-align: center;
+}
+
+.screen__name-line {
+  display: block;
+}
+
+.screen__contact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: baseline;
+  gap: clamp(12px, 2.5vw, 20px);
+  font-family: var(--font);
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: 0 4px 24px var(--shadow);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.screen__contact:hover {
+  opacity: 0.88;
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+.screen__contact-label {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.screen__contact-phone {
+  font-size: clamp(1.75rem, 5.5vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 520px) {
+  .screen__content {
+    padding-inline: 16px;
+  }
+
+  .screen__name {
+    letter-spacing: 0.02em;
+  }
+
+  .screen__contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    white-space: normal;
+  }
+}
