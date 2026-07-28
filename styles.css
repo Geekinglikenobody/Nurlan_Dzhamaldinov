@@ -1,7 +1,7 @@
 :root {
-  --ink: #f0d9a8;
-  --shadow: rgba(12, 8, 4, 0.62);
-  --font: "Cormorant Garamond", Georgia, serif;
+  --ink: #ffe7b0;
+  --shadow: rgba(0, 0, 0, 0.85);
+  --font: Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -15,7 +15,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #0a0806;
+  background: #1a120c;
   font-family: var(--font);
   color: var(--ink);
 }
@@ -26,6 +26,17 @@ body {
   height: 100dvh;
   min-height: 100vh;
   overflow: hidden;
+  background: #1a120c;
+}
+
+.screen__photo {
+  position: absolute;
+  inset: 0;
+  background:
+    #1a120c
+    url("assets/photos/stage-crowd.png")
+    center / cover no-repeat;
+  z-index: 0;
 }
 
 .screen__video {
@@ -35,20 +46,22 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  z-index: 1;
+  background: transparent;
 }
 
 .screen__overlay {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background:
-    linear-gradient(180deg, rgba(18, 10, 6, 0.78) 0%, rgba(18, 10, 6, 0.22) 40%, rgba(18, 10, 6, 0.22) 60%, rgba(18, 10, 6, 0.78) 100%),
-    radial-gradient(circle at center, rgba(240, 217, 168, 0.06) 0%, rgba(0, 0, 0, 0.5) 100%);
+    linear-gradient(180deg, rgba(10, 6, 4, 0.72) 0%, rgba(10, 6, 4, 0.28) 40%, rgba(10, 6, 4, 0.28) 60%, rgba(10, 6, 4, 0.78) 100%);
   pointer-events: none;
 }
 
 .screen__content {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,12 +82,14 @@ body {
   width: 100%;
   font-family: var(--font);
   font-size: clamp(2.4rem, 8vw, 5.5rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: 0.04em;
-  color: var(--ink);
+  color: #fff6d8;
   text-transform: uppercase;
-  text-shadow: 0 4px 32px var(--shadow);
+  text-shadow:
+    0 2px 0 rgba(0, 0, 0, 0.55),
+    0 8px 28px rgba(0, 0, 0, 0.9);
   text-align: center;
 }
 
@@ -90,16 +105,21 @@ body {
   display: inline-flex;
   align-items: baseline;
   gap: clamp(12px, 2.5vw, 20px);
+  padding: 14px 22px;
+  border: 1px solid rgba(255, 231, 176, 0.45);
+  background: rgba(12, 8, 5, 0.55);
+  backdrop-filter: blur(6px);
   font-family: var(--font);
-  color: var(--ink);
+  color: #fff6d8;
   text-decoration: none;
   white-space: nowrap;
-  text-shadow: 0 4px 24px var(--shadow);
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
+  transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
 }
 
 .screen__contact:hover {
-  opacity: 0.88;
+  opacity: 0.95;
+  background: rgba(12, 8, 5, 0.72);
   transform: translate(-50%, -50%) scale(1.02);
 }
 
@@ -111,7 +131,7 @@ body {
 
 .screen__contact-phone {
   font-size: clamp(1.75rem, 5.5vw, 3.2rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
