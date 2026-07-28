@@ -105,22 +105,14 @@ body {
   display: inline-flex;
   align-items: baseline;
   gap: clamp(12px, 2.5vw, 20px);
-  padding: 14px 22px;
-  border: 1px solid rgba(255, 231, 176, 0.45);
-  background: rgba(12, 8, 5, 0.55);
-  backdrop-filter: blur(6px);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
   font-family: var(--font);
   color: #fff6d8;
-  text-decoration: none;
   white-space: nowrap;
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
-  transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
-}
-
-.screen__contact:hover {
-  opacity: 0.95;
-  background: rgba(12, 8, 5, 0.72);
-  transform: translate(-50%, -50%) scale(1.02);
 }
 
 .screen__contact-label {
