@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D · Афиша-центр — Нурлан Джамалдинов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_wire.css" />
+  <style>
+    .event-hero {
+      min-height: min(78vh, 700px);
+      display: grid;
+      align-content: end;
+      padding: 48px 24px;
+      background:
+        linear-gradient(to top, #0e0d0cee 15%, #0e0d0c55 55%, transparent),
+        repeating-linear-gradient(-12deg, #1a1714 0 12px, #141210 12px 24px);
+      border-bottom: 1px dashed var(--line);
+      position: relative;
+    }
+    .event-hero .section-label { top: 56px; }
+    .meta { color: var(--accent); margin-top: 8px; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="wire-bar">
+    <span class="current">D · Афиша-центр</span>
+    <nav>
+      <a href="../index.html">Все макеты</a>
+      <a href="a-scena.html">A</a>
+      <a href="b-media.html">B</a>
+      <a href="c-bookers.html">C</a>
+    </nav>
+  </div>
+
+  <section class="event-hero">
+    <span class="section-label">1 · Герой = ближайший концерт</span>
+    <p class="kicker">Нурлан Джамалдинов · соло</p>
+    <h1>Название<br />концерта</h1>
+    <p class="meta">Город · площадка · 00 месяц 2026</p>
+    <p class="muted" style="margin-top: 10px; max-width: 28rem;">Обложка события full-bleed. CTA: билеты или бронь выступления.</p>
+    <div>
+      <a class="btn" href="#">Билеты</a>
+      <a class="btn ghost" href="#booking">Забронировать артиста</a>
+    </div>
+  </section>
+
+  <section class="section" id="highlights">
+    <span class="section-label">2 · Хайлайты</span>
+    <h2>Хайлайты</h2>
+    <div class="scroll-x">
+      <div class="video-card">Видео 1<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Видео 2<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Видео 3<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Видео 4<span class="mute">🔇 звук</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="bio">
+    <span class="section-label">3 · Био</span>
+    <h2>Биография</h2>
+    <div class="row">
+      <div class="ph photo">Фото</div>
+      <p class="muted">Текст биографии рядом с фото. После афиши — контекст «кто на сцене».</p>
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <span class="section-label">4 · Календарь</span>
+    <h2>Занятость и бронь</h2>
+    <div class="row">
+      <div class="calendar">
+        <div class="day muted">пн</div><div class="day muted">вт</div><div class="day muted">ср</div><div class="day muted">чт</div><div class="day muted">пт</div><div class="day muted">сб</div><div class="day muted">вс</div>
+        <div class="day free">1</div><div class="day busy">2</div><div class="day free">3</div><div class="day free">4</div><div class="day busy">5</div><div class="day free">6</div><div class="day free">7</div>
+        <div class="day free">8</div><div class="day free">9</div><div class="day busy">10</div><div class="day free">11</div><div class="day free">12</div><div class="day free">13</div><div class="day busy">14</div>
+      </div>
+      <div>
+        <a class="btn" href="#">Telegram-бот</a>
+        <p class="muted" style="margin-top: 12px;">Занятые даты подтягиваются с бэкенда / таблицы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="affiche">
+    <span class="section-label">5 · Другие события</span>
+    <h2>Ещё в афише</h2>
+    <div class="scroll-x">
+      <div class="poster"><strong>Событие</strong><span>дата</span></div>
+      <div class="poster"><strong>Событие</strong><span>дата</span></div>
+      <div class="poster"><strong>Событие</strong><span>дата</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="platforms">
+    <span class="section-label">6 · Платформы + контакты</span>
+    <h2>Слушать и связаться</h2>
+    <div class="platforms" style="margin-bottom: 20px;">
+      <span>Spotify</span><span>Apple</span><span>VK</span><span>Yandex</span>
+    </div>
+    <p class="contacts"><a href="tel:+70000000000">+7 (___) ___-__-__</a> · <a href="mailto:hello@example.com">hello@example.com</a></p>
+  </section>
+</body>
+</html>

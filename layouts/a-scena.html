@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A · Сцена — Нурлан Джамалдинов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_wire.css" />
+</head>
+<body>
+  <div class="wire-bar">
+    <span class="current">A · Сцена</span>
+    <nav>
+      <a href="../index.html">Все макеты</a>
+      <a href="b-media.html">B</a>
+      <a href="c-bookers.html">C</a>
+      <a href="d-poster.html">D</a>
+    </nav>
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="#">Нурлан Джамалдинов</a>
+    <a href="#highlights">Хайлайты</a>
+    <a href="#affiche">Афиша</a>
+    <a href="#bio">Био</a>
+    <a href="#booking">Бронь</a>
+    <a href="#contacts">Контакты</a>
+  </header>
+
+  <section class="section" style="padding: 0; border: none;">
+    <span class="section-label">1 · Hero</span>
+    <div class="ph hero-img" style="border: none; border-bottom: 1px dashed var(--line); align-content: end; justify-items: start; padding: 48px 24px;">
+      <div>
+        <p class="kicker">Артист · певец · исполнитель</p>
+        <h1>Нурлан<br />Джамалдинов</h1>
+        <p class="muted" style="margin-top: 12px; max-width: 28rem;">Плейсхолдер фото full-bleed. Имя — главный сигнал первого экрана.</p>
+        <a class="btn" href="#booking">Забронировать дату</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="highlights">
+    <span class="section-label">2 · Хайлайты</span>
+    <p class="kicker">Выступления</p>
+    <h2>Хайлайты</h2>
+    <p class="muted" style="margin-bottom: 18px;">Горизонтальный скролл · по умолчанию без звука · кнопка unmute</p>
+    <div class="scroll-x">
+      <div class="video-card">Видео 1<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Видео 2<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Видео 3<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Видео 4<span class="mute">🔇 звук</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="affiche">
+    <span class="section-label">3 · Афиша</span>
+    <p class="kicker">Ближайшие события</p>
+    <h2>Афиша</h2>
+    <div class="scroll-x">
+      <div class="poster"><strong>Сольный концерт</strong><span>Город · дата</span></div>
+      <div class="poster"><strong>Фестиваль</strong><span>Город · дата</span></div>
+      <div class="poster"><strong>Крупное шоу</strong><span>Город · дата</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="bio">
+    <span class="section-label">4 · Биография</span>
+    <p class="kicker">Об артисте</p>
+    <h2>Биография</h2>
+    <div class="row">
+      <div class="ph photo">Фото артиста</div>
+      <div>
+        <p class="muted">Короткий текст биографии: стиль, сцена, путь. 2–4 абзаца. Позже заменим на реальный текст и фото.</p>
+        <p class="muted" style="margin-top: 12px;">Плейсхолдер · фото слева / текст справа (на мобилке столбиком).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <span class="section-label">5 · Бронь</span>
+    <p class="kicker">Telegram-бот</p>
+    <h2>Бронирование</h2>
+    <div class="row">
+      <div>
+        <p class="muted" style="margin-bottom: 14px;">Календарь занятости. Занятые даты отмечены. Запрос даты — через бота.</p>
+        <div class="calendar" aria-label="Календарь-плейсхолдер">
+          <div class="day muted">пн</div><div class="day muted">вт</div><div class="day muted">ср</div><div class="day muted">чт</div><div class="day muted">пт</div><div class="day muted">сб</div><div class="day muted">вс</div>
+          <div class="day"></div><div class="day"></div><div class="day free">1</div><div class="day free">2</div><div class="day busy">3</div><div class="day free">4</div><div class="day free">5</div>
+          <div class="day busy">6</div><div class="day busy">7</div><div class="day free">8</div><div class="day free">9</div><div class="day free">10</div><div class="day busy">11</div><div class="day free">12</div>
+          <div class="day free">13</div><div class="day free">14</div><div class="day busy">15</div><div class="day free">16</div><div class="day free">17</div><div class="day free">18</div><div class="day free">19</div>
+        </div>
+        <p class="muted" style="margin-top: 10px; font-size: 0.8rem;"><span style="color:#f0c9c9">■</span> занято &nbsp; <span style="color:#9dbaa5">■</span> свободно</p>
+      </div>
+      <div>
+        <p class="muted">Кнопка открывает Telegram-бота с выбранной датой.</p>
+        <a class="btn" href="#">Открыть бота в Telegram</a>
+        <a class="btn ghost" href="#contacts" style="margin-left: 8px;">Или написать напрямую</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="platforms">
+    <span class="section-label">6 · Платформы</span>
+    <p class="kicker">Слушать</p>
+    <h2>Музыкальные платформы</h2>
+    <div class="platforms">
+      <span>Spotify</span><span>Apple Music</span><span>VK Music</span><span>Yandex Music</span><span>YouTube Music</span>
+    </div>
+  </section>
+
+  <footer class="section contacts" id="contacts">
+    <span class="section-label">7 · Контакты</span>
+    <p class="kicker">Связь</p>
+    <h2>Контакты</h2>
+    <p>Тел: <a href="tel+1-555-0035">+7 (___) ___-__-__</a></p>
+    <p style="margin-top: 8px;">Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+  </footer>
+</body>
+</html>

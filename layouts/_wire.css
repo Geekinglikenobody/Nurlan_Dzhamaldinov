@@ -1,0 +1,230 @@
+:root {
+  --bg: #0e0d0c;
+  --surface: #171512;
+  --ink: #f3ece4;
+  --muted: #8f867c;
+  --line: #2e2924;
+  --accent: #c4a574;
+  --busy: #8b3a3a;
+  --free: #3d5c45;
+  --label: #e8a54b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Geist, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.wire-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #1a1714ee;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  font-size: 0.8rem;
+}
+
+.wire-bar a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.wire-bar a:hover { color: var(--ink); }
+
+.wire-bar .current {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.85rem;
+}
+
+.nav a { color: var(--muted); text-decoration: none; }
+.nav .brand {
+  color: var(--ink);
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 1.15rem;
+  margin-right: auto;
+}
+
+.section {
+  padding: 48px 24px;
+  border-bottom: 1px dashed var(--line);
+  position: relative;
+}
+
+.section-label {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--label);
+  opacity: 0.85;
+}
+
+.kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+}
+
+h1 { font-size: clamp(2.4rem, 7vw, 4.2rem); letter-spacing: -0.02em; line-height: 1.05; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 16px; }
+
+.ph {
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 16px;
+}
+
+.ph.photo { min-height: 280px; }
+.ph.hero-img {
+  min-height: min(72vh, 640px);
+  width: 100%;
+}
+
+.row { display: flex; gap: 20px; flex-wrap: wrap; }
+.row > * { flex: 1 1 280px; }
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: #14110e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.muted { color: var(--muted); }
+
+.scroll-x {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-x > * {
+  flex: 0 0 min(78vw, 320px);
+  scroll-snap-align: start;
+}
+
+.video-card {
+  aspect-ratio: 16 / 10;
+  background: #1c1916;
+  border: 1px dashed var(--line);
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.video-card .mute {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  background: #000a;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.poster {
+  aspect-ratio: 3 / 4;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+}
+
+.poster strong { font-size: 0.95rem; }
+.poster span { color: var(--muted); font-size: 0.8rem; margin-top: 4px; }
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  max-width: 420px;
+}
+
+.calendar .day {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.calendar .busy { background: color-mix(in srgb, var(--busy) 45%, var(--surface)); color: #f0c9c9; }
+.calendar .free { background: color-mix(in srgb, var(--free) 35%, var(--surface)); }
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.platforms span {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.contacts a { color: var(--accent); }
+
+footer.section { padding-bottom: 80px; }
+
+@media (max-width: 600px) {
+  .section { padding: 36px 16px; }
+  .nav { padding: 12px 16px; }
+}

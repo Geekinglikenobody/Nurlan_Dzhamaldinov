@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C · Для букеров — Нурлан Джамалдинов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_wire.css" />
+  <style>
+    .avail {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 8px 12px;
+      border: 1px solid var(--free);
+      color: #9dbaa5;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wire-bar">
+    <span class="current">C · Для букеров</span>
+    <nav>
+      <a href="../index.html">Все макеты</a>
+      <a href="a-scena.html">A</a>
+      <a href="b-media.html">B</a>
+      <a href="d-poster.html">D</a>
+    </nav>
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="#">Нурлан Джамалдинов</a>
+    <a href="#booking">Календарь</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#highlights">Медиа</a>
+  </header>
+
+  <section class="section">
+    <span class="section-label">1 · Hero для заказчиков</span>
+    <p class="kicker">Booking</p>
+    <h1>Нурлан<br />Джамалдинов</h1>
+    <p class="muted" style="margin-top: 12px; max-width: 30rem;">Доступен для корпоративов, свадеб, фестивалей и сольных концертов.</p>
+    <div class="avail">Ближайшее свободное окно: 12 августа</div>
+    <div style="margin-top: 8px;">
+      <a class="btn" href="#booking">Проверить даты</a>
+      <a class="btn ghost" href="#contacts">Связаться</a>
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <span class="section-label">2 · Календарь сразу</span>
+    <p class="kicker">Занятость</p>
+    <h2>Календарь бронирования</h2>
+    <div class="row">
+      <div>
+        <div class="calendar">
+          <div class="day muted">пн</div><div class="day muted">вт</div><div class="day muted">ср</div><div class="day muted">чт</div><div class="day muted">пт</div><div class="day muted">сб</div><div class="day muted">вс</div>
+          <div class="day"></div><div class="day free">1</div><div class="day free">2</div><div class="day busy">3</div><div class="day busy">4</div><div class="day free">5</div><div class="day free">6</div>
+          <div class="day free">7</div><div class="day free">8</div><div class="day busy">9</div><div class="day free">10</div><div class="day free">11</div><div class="day free">12</div><div class="day busy">13</div>
+          <div class="day free">14</div><div class="day free">15</div><div class="day free">16</div><div class="day busy">17</div><div class="day free">18</div><div class="day free">19</div><div class="day free">20</div>
+        </div>
+        <p class="muted" style="margin-top: 10px; font-size: 0.8rem;">Клик по свободной дате → Telegram-бот</p>
+      </div>
+      <div>
+        <p class="muted">Заявка уходит менеджеру в Telegram: дата, город, формат, контакт.</p>
+        <a class="btn" href="#">Открыть бота</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contacts" id="contacts">
+    <span class="section-label">3 · Контакты высоко</span>
+    <h2>Прямая связь</h2>
+    <p style="font-size: 1.15rem;">Тел: <a href="tel:+70000000000">+7 (___) ___-__-__</a></p>
+    <p style="margin-top: 8px; font-size: 1.15rem;">Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+  </section>
+
+  <section class="section" id="highlights">
+    <span class="section-label">4 · Доказательство</span>
+    <h2>Хайлайты</h2>
+    <div class="scroll-x">
+      <div class="video-card">Live 1<span class="mute">🔇</span></div>
+      <div class="video-card">Live 2<span class="mute">🔇</span></div>
+      <div class="video-card">Live 3<span class="mute">🔇</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="affiche">
+    <span class="section-label">5 · Афиша</span>
+    <h2>Афиша</h2>
+    <div class="scroll-x">
+      <div class="poster"><strong>Событие</strong><span>дата</span></div>
+      <div class="poster"><strong>Событие</strong><span>дата</span></div>
+      <div class="poster"><strong>Событие</strong><span>дата</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="bio">
+    <span class="section-label">6 · Био</span>
+    <h2>Биография</h2>
+    <div class="row">
+      <div class="ph photo">Фото</div>
+      <p class="muted">Краткое био для организаторов: жанр, опыт, состав (соло / группа).</p>
+    </div>
+  </section>
+
+  <section class="section" id="platforms">
+    <span class="section-label">7 · Платформы</span>
+    <h2>Платформы</h2>
+    <div class="platforms">
+      <span>Spotify</span><span>Apple</span><span>VK</span><span>Yandex</span>
+    </div>
+  </section>
+</body>
+</html>

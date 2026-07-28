@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B · Медиа-лента — Нурлан Джамалдинов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_wire.css" />
+  <style>
+    .hero-compact {
+      padding: 56px 24px 40px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .video-card { flex-basis: min(88vw, 420px); aspect-ratio: 16 / 9; }
+    .scroll-x > .video-card { flex: 0 0 min(88vw, 420px); }
+    .affiche-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 14px;
+    }
+    .bio-strip {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    @media (max-width: 560px) {
+      .bio-strip { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wire-bar">
+    <span class="current">B · Медиа-лента</span>
+    <nav>
+      <a href="../index.html">Все макеты</a>
+      <a href="a-scena.html">A</a>
+      <a href="c-bookers.html">C</a>
+      <a href="d-poster.html">D</a>
+    </nav>
+  </div>
+
+  <section class="hero-compact">
+    <span class="section-label" style="position: static; display: block; margin-bottom: 12px;">1 · Hero компактный</span>
+    <p class="kicker">Нурлан Джамалдинов</p>
+    <h1 style="font-size: clamp(2rem, 5vw, 3rem);">Сцена. Голос. Момент.</h1>
+    <p class="muted" style="margin-top: 10px; max-width: 32rem;">Короткий герой — сразу к видео и афише. Для тех, кто листает ленту.</p>
+    <a class="btn" href="#booking">Забронировать</a>
+  </section>
+
+  <section class="section" id="highlights">
+    <span class="section-label">2 · Хайлайты крупно</span>
+    <p class="kicker">Выступления</p>
+    <h2>Хайлайты</h2>
+    <div class="scroll-x">
+      <div class="video-card">Клип / live 1<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Клип / live 2<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Клип / live 3<span class="mute">🔇 звук</span></div>
+      <div class="video-card">Клип / live 4<span class="mute">🔇 звук</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="affiche">
+    <span class="section-label">3 · Афиша сеткой</span>
+    <p class="kicker">События</p>
+    <h2>Афиша</h2>
+    <div class="affiche-grid">
+      <div class="poster"><strong>Соло</strong><span>дата</span></div>
+      <div class="poster"><strong>Фест</strong><span>дата</span></div>
+      <div class="poster"><strong>Шоу</strong><span>дата</span></div>
+      <div class="poster"><strong>Тур</strong><span>дата</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="platforms">
+    <span class="section-label">4 · Платформы</span>
+    <h2>Слушать</h2>
+    <div class="platforms">
+      <span>Spotify</span><span>Apple Music</span><span>VK</span><span>Yandex</span><span>YouTube</span>
+    </div>
+  </section>
+
+  <section class="section" id="bio">
+    <span class="section-label">5 · Био полосой</span>
+    <h2>Биография</h2>
+    <div class="bio-strip">
+      <div class="ph photo" style="min-height: 120px;">Фото</div>
+      <p class="muted">Узкая био-полоса: один абзац + фото. Не конкурирует с медиа.</p>
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <span class="section-label">6 · Бронь</span>
+    <h2>Бронирование</h2>
+    <div class="row">
+      <div class="calendar">
+        <div class="day muted">пн</div><div class="day muted">вт</div><div class="day muted">ср</div><div class="day muted">чт</div><div class="day muted">пт</div><div class="day muted">сб</div><div class="day muted">вс</div>
+        <div class="day free">1</div><div class="day busy">2</div><div class="day free">3</div><div class="day free">4</div><div class="day busy">5</div><div class="day free">6</div><div class="day free">7</div>
+      </div>
+      <div>
+        <a class="btn" href="#">Telegram-бот</a>
+        <p class="muted" style="margin-top: 12px;">Тел / email внизу.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section contacts" id="contacts">
+    <span class="section-label">7 · Контакты</span>
+    <h2>Контакты</h2>
+    <p><a href="tel:+70000000000">+7 (___) ___-__-__</a> · <a href="mailto:hello@example.com">hello@example.com</a></p>
+  </footer>
+</body>
+</html>
